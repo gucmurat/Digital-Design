@@ -19,9 +19,14 @@ At every clock edge lfsr_a and lfsr_b becomes another random number.
 Outc increases 1 in every loop or rising clock edge.
 Pi increases if integer versions of lfsr_a and lfsr_b which are X and Y satisfy the equation X^2 + Y^2 < D
  
-	Generator of LFSR package uses Galois LFSR’s procedure with feedback system one_to_many and many_to_one methods which are used in project. In the Galois configuration, when the system is clocked, bits that are not taps are shifted one position to the right unchanged. The taps, on the other hand, are XORed with the output bit before they are stored in the next position which means pattern. We used that as “10001110”. The new output bit is the next input bit. The effect of this is that when the output bit is zero, all the bits in the register shift to the right unchanged, and the input bit becomes zero. When the output bit is one, the bits in the tap positions all flip (if they are 0, they become 1, and if they are 1, they become 0), and then the entire register is shifted to the right and the input bit becomes 1.
-
-
+Generator of LFSR package uses Galois LFSR’s procedure with feedback system one_to_many and many_to_one methods which are used in project. 
+In the Galois configuration, when the system is clocked, bits that are not taps are shifted one position to the right unchanged. 
+The taps, on the other hand, are XORed with the output bit before they are stored in the next position which means pattern. 
+We used that as “10001110”. The new output bit is the next input bit. The effect of this is that when the output bit is zero, 
+all the bits in the register shift to the right unchanged, and the input bit becomes zero. When the output bit is one, 
+the bits in the tap positions all flip (if they are 0, they become 1, and if they are 1, they become 0), and 
+then the entire register is shifted to the right and the input bit becomes 1.
+	
 **Conclusion**
 Monte Carlo Integration is used in this project and this algorithm gives better output with more iterations. This algorithm prints out 3.06 as the pi approximation better approximation can be made with more loops. Linear feedback shift register is used to take the random point. Random points are determined by two random numbers and those numbers are checked if it is in the circles area. With the equation that connects probability and area, pi can be approximately calculated. The equation depends on probability so when more random operations are done, better approximation can be made. 
 
