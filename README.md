@@ -1,4 +1,4 @@
-# piAppr.-with-LFSR
+# piLFSR
 **Introduction and Objectives**
 The objective is to calculate pi. The project uses The Monte Carlo Integration algorithm. This algorithm chooses random points from a 2x2 square. There is also a circle that is concentric to the square. The points should be distributed proportional to their area because there is a pi constant in the circles area it can be calculated. 
 This is the main equation that helps with deriving pi. When number of points get higher there should be a better approximation in theory.
